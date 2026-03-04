@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Mim | Sávio Soares</title>
+
+  <link rel="stylesheet" href="./css/global.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="./assets/icons/icone.png" type="image/x-icon" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4A90E2", // Cor principal azul
+            "fundo-claro": "#F5F5F5", // Fundo claro
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .profile-ring {
+      box-shadow: 0 0 0 8px rgba(74, 144, 226, 0.3);
+      /* primary com transparência */
+    }
+  </style>
+</head>
+
+<body class="bg-fundo-claro min-h-screen">
+  <header class="bg-white shadow-md p-4 md:px-12 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-2xl font-bold text-gray-800">Douglas Sousa</div>
+
+    <nav class="hidden md:flex space-x-8" id="navMenu" aria-label="Desktop Menu">
+      <a href="index.html"
+        class="text-gray-600 hover:text-primary hover:border-b-2 hover:border-primary pb-1 transition duration-300">Início</a>
+      <a href="projetos.html"
+        class="text-gray-600 hover:text-primary hover:border-b-2 hover:border-primary pb-1 transition duration-300">Projetos</a>
+      <a href="sobre.html" class="text-gray-800 hover:text-primary pb-1 border-b-2 border-primary active">Sobre mim</a>
+      <a href="contato.html"
+        class="text-gray-600 hover:text-primary hover:border-b-2 hover:border-primary pb-1 transition duration-300">Contatos</a>
+    </nav>
+
+    <button class="md:hidden flex flex-col justify-center items-center menu-toggle z-50" id="menuToggle"
+      aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="mobileMenu"
+      class="fixed top-0 left-0 w-full h-full bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-40"
+      aria-label="Mobile Menu">
+      <ul class="flex flex-col items-center justify-center h-full text-2xl space-y-8">
+        <li>
+          <a href="index.html" class="text-white hover:text-primary">Início</a>
+        </li>
+        <li>
+          <a href="projetos.html" class="text-white hover:text-primary">Projetos</a>
+        </li>
+        <li>
+          <a href="sobre.html" class="text-primary hover:text-white">Sobre mim</a>
+        </li>
+        <li>
+          <a href="contato.html" class="text-white hover:text-primary">Contatos</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 md:py-16">
+    <!-- ======= INICIO ======= -->
+
+    <section class="md:p-12 rounded-2xl flex flex-col md:flex-row items-center gap-10 mb-16">
+      <div class="flex-shrink-0">
+        <img src="./assets/630125163_18123142816571359_4244764109354172927_n.jpg" alt="Foto de Perfil de Douglas Sousa"
+          class="w-44 h-44 md:w-56 md:h-56 rounded-full object-cover border-4 border-white profile-ring transition-transform duration-500 hover:scale-105" />
+      </div>
+
+      <div class="md:w-3/4">
+        <p class="text-primary font-semibold text-lg mb-2">
+          Desenvolvedor de Software
+        </p>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+          Olá, eu sou Douglas,<br />
+          desenvolvedor focado em soluções web e mobile.
+        </h1>
+
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Estudante de Engenharia de Software com <strong>2+ anos de experiência</strong> no desenvolvimento de
+          aplicações <strong>web</strong> e <strong>mobile</strong>, atuando desde a
+          concepção até a implementação. Trabalho como
+          <strong>Full-Stack</strong>, buscando código limpo, performance e boa
+          experiência do usuário.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======= HARD SKILLS ======= -->
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 border-b-4 border-primary pb-3">
+        Minhas Hard Skills
+      </h2>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/nestjs.png" alt="Ícone de Server" class="w-10 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">NestJS</p>
+          <span class="text-xs text-gray-500">APIs Escaláveis</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/node.png" alt="Ícone de Server" class="w-10 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">Node.js</p>
+          <span class="text-xs text-gray-500">Framework JavaScript</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/nextjs.png" alt="Ícone de Server" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">Next.js</p>
+          <span class="text-xs text-gray-500">Framework React</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/vue.png" alt="Ícone de Server" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">Vue.js</p>
+          <span class="text-xs text-gray-500">Framework Typescript</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/atom.svg" alt="Ícone de Atom" class="w-8 h-8 mb-3 icons-cyan" />
+          <p class="font-semibold text-gray-800 text-center">React/RN</p>
+          <span class="text-xs text-gray-500">Interfaces Modernas</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/kotlin.svg" alt="Ícone de Database" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">Kotlin</p>
+          <span class="text-xs text-gray-500">Desenvolvimento Android</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/javascripttypescript.png" alt="Ícone de Informações" class="w-12 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">JS/TS</p>
+          <span class="text-xs text-gray-500">Back/Front-end</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/cplusplus.png" alt="Ícone de Informações" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">C/C++</p>
+          <span class="text-xs text-gray-500">Linguagens de Baixo Nível</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/database.svg" alt="Ícone de Database" class="w-8 h-8 mb-3 icons-blue" />
+          <p class="font-semibold text-gray-800 text-center">SQL/NoSQL</p>
+          <span class="text-xs text-gray-500">Modelagem de Dados</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/postgresql.png" alt="Ícone de Database" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">PostgreSQL</p>
+          <span class="text-xs text-gray-500">Banco de Dados</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/circle-check.svg" alt="Ícone de Informações" class="w-8 h-8 mb-3 icons-red" />
+          <p class="font-semibold text-gray-800 text-center">Testes</p>
+          <span class="text-xs text-gray-500">TDD/BDD & QA</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/docker.png" alt="Ícone de Informações" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">Docker</p>
+          <span class="text-xs text-gray-500">Containerização</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/kubernetes.png" alt="Ícone de Informações" class="w-8 h-8 mb-3 icons-blue" />
+          <p class="font-semibold text-gray-800 text-center">Kubernetes</p>
+          <span class="text-xs text-gray-500">Container Orquestração</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/aws.png" alt="Ícone de Cloud" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">AWS</p>
+          <span class="text-xs text-gray-500">Cloud & Deploy</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/azure.png" alt="Ícone de Informações" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">Azure</p>
+          <span class="text-xs text-gray-500">Cloud Computing</span>
+        </div>
+        <div
+          class="flex flex-col items-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition duration-300 hover:scale-[1.02]">
+          <img src="./assets/icons/googlecloud.png" alt="Ícone de Informações" class="w-8 h-8 mb-3" />
+          <p class="font-semibold text-gray-800 text-center">GCP</p>
+          <span class="text-xs text-gray-500">Google Cloud Platform</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= HABILIDADES ======= -->
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-primary pb-3">
+        Experiência Profissional e Formação
+      </h2>
+
+      <div class="space-y-12 pl-4">
+        <div class="timeline-item">
+          <p class="text-sm font-semibold text-gray-500 mb-1">
+            Jan 2023 – Dez 2026 (Previsão)
+          </p>
+          <h3 class="text-2xl font-bold text-primary mb-1">
+            Graduação em Engenharia de Software
+          </h3>
+
+          <a href="https://www.quixada.ufc.br/" target="_blank" rel="noopener"
+            class="text-lg font-medium mb-4 inline-block underline text-gray-800 hover:text-blue-600 transition duration-300">
+            UFC (Universidade Federal do Ceará - Campus Quixadá)
+          </a>
+
+          <div class="text-gray-700 space-y-6">
+            <p>
+              Minha formação é focada na aplicação prática de metodologias e
+              arquitetura de sistemas, preparando-me para todo o ciclo de vida
+              do software, desde a concepção até a entrega e manutenção.
+            </p>
+
+            <h4 class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-1 mt-6">
+              Engenharia e Qualidade de Software
+            </h4>
+            <p class="text-sm">
+              Disciplinas que formam a espinha dorsal da minha carreira,
+              garantindo que os projetos não sejam apenas funcionais, mas
+              sustentáveis, escaláveis e de alta qualidade:
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Introdução a Engenharia de Software</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Processos de Software</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Requisitos de Software</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Análise e Projeto de Sistemas</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Arquitetura de Software</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Gerência de Projetos</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Qualidade de Software</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Verificação e Validação (TDD/BDD)</span>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Gerência de Configuração</span>
+              <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full">Projeto Extensionista em ES (1, 2 e
+                3)</span>
+            </div>
+
+            <h4 class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-1 mt-6">
+              Desenvolvimento e Arquitetura
+            </h4>
+            <p class="text-sm">
+              Foco no código limpo e na infraestrutura robusta, abrangendo
+              desde o backend até a experiência do usuário final:
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">POO (Programação Orientada a Objetos -
+                JAVA)</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Estrutura de Dados (C++)</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Projeto e Análise de Algoritmos</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Desenvolvimento Web</span>
+              <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full">Desenvolvimento Móvel (Kotlin)</span>
+              <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full">Interação Humano-Computador (IHC)</span>
+              <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full">User Experience (UX)</span>
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Banco de Dados (PostgreSQL)</span>
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Redes de Computadores</span>
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Sistemas Operacionais</span>
+              <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full">Arquitetura de Computadores</span>
+            </div>
+
+            <h4 class="text-xl font-bold text-gray-900 border-b border-gray-300 pb-1 mt-6">
+              Fundamentos e Inovação
+            </h4>
+            <p class="text-sm">
+              Base matemática e teórica, além de contato com áreas avançadas:
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Matemática Básica e Discreta</span>
+              <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Probabilidade e Estatística</span>
+              <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full">Inteligência Artificial</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <p class="text-sm font-semibold text-gray-500 mb-1">Set 2024 – Dez 2025</p>
+          <h3 class="text-2xl font-bold text-gray-900 mb-1">
+            Desenvolvedor Front-end Júnior
+          </h3>
+
+          <a href="http://engstrategy.com.br/" target="_blank" rel="noopener"
+            class="text-lg font-medium mb-4 inline-block underline text-gray-800 hover:text-blue-600 transition duration-300">
+            EngStrategy
+          </a>
+
+          <ul class="list-disc space-y-2 text-gray-700 ml-5">
+            <li>
+              Minha primeira experiência profissional na área de
+              desenvolvimento, onde tive o meu primeiro contato com
+              <strong>Cliente Real</strong>.
+            </li>
+            <li>
+              Responsável pelo desenvolvimento front-end utilizando <strong>JavaFX, React, Next.js e
+              React Native</strong> seguindo os padrões de
+              acessibilidade.
+            </li>
+            <li>
+              Gerenciamento de dados e lógica com <strong>Node.js</strong>.
+            </li>
+            <li>
+              Colaboração em equipe ágil utilizando <strong>Scrum</strong> e
+              práticas de <strong>Git Flow</strong>.
+            </li>
+            <li>
+              Otimização de performance de carregamento, reduzindo o tempo de
+              latência inicial.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= CERTIFICAÇÕES ======= -->
+
+    <!--<section class="mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b-4 border-primary pb-3">
+        Certificações
+      </h2>
+
+      <div class="space-y-8">
+        <div
+          class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-md border-l-4 border-primary hover:shadow-lg transition duration-300">
+          <div class="flex-shrink-0 flex justify-center md:justify-start items-center">
+            <img src="./assets/certifications/azure-data-engineer.png" alt="Selo Azure Data Engineer"
+              class="w-32 h-32 md:w-48 md:h-48 object-contain hover:scale-105 transition-transform duration-300 drop-shadow-sm">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Microsoft Certified: Azure Data Engineer Associate</h3>
+            <p class="text-sm font-semibold text-gray-500 mb-3">Microsoft</p>
+
+            <p class="text-gray-700 mb-4">
+              Certificação focada na arquitetura e implementação de soluções de dados seguras e escaláveis utilizando os
+              serviços de dados do Microsoft Azure. Competências consolidadas:
+            </p>
+
+            <ul class="list-disc space-y-2 text-gray-700 ml-5 mb-6">
+              <li>Integração, transformação e consolidação de dados de sistemas estruturados e não estruturados.</li>
+              <li>Criação de pipelines de processamento e análise de dados com Azure Synapse Analytics e Azure Data
+                Factory.</li>
+              <li>Gerenciamento de armazenamento seguro de dados no Azure Data Lake Storage.</li>
+              <li>Monitoramento e otimização do processamento de dados para desempenho eficiente.</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#Azure</span>
+              <span
+                class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#DataEngineering</span>
+              <span
+                class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#CloudComputing</span>
+              <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#BigData</span>
+            </div>
+
+            <a href="https://drive.google.com/file/d/1enOba8y1tnHxEMXSY5Y_b7YIY6c1Qifk/view?usp=sharing" target="_blank"
+              rel="noopener"
+              class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition duration-300">
+              Ver Certificado Original
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-md border-l-4 border-primary hover:shadow-lg transition duration-300">
+          <div class="flex-shrink-0 flex justify-center md:justify-start items-center">
+            <img src="./assets/certifications/manage-kubernetes-in-google-cloud-skill-badge.png"
+              alt="Selo Kubernetes Google Cloud"
+              class="w-32 h-32 md:w-48 md:h-48 object-contain hover:scale-105 transition-transform duration-300 drop-shadow-sm">
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Manage Kubernetes in Google Cloud</h3>
+            <p class="text-sm font-semibold text-gray-500 mb-3">Google Cloud Skills Boost</p>
+
+            <p class="text-gray-700 mb-4">
+              Selo de Especialista em Gestão de Kubernetes no Google Cloud. Um passo importante na jornada para dominar
+              tecnologias de nuvem e orquestração de contêineres. Competências consolidadas:
+            </p>
+
+            <ul class="list-disc space-y-2 text-gray-700 ml-5 mb-6">
+              <li>Configuração e implantação de clusters GKE com autoescalonamento.</li>
+              <li>Implementação de monitoramento gerenciado com Prometheus e criação de métricas personalizadas baseadas
+                em logs (Cloud Logging).</li>
+              <li>Configuração de políticas de alertas para identificar falhas em Pods antes que afetem o usuário final.
+              </li>
+              <li>CI/CD e Conteinerização: Ciclo completo de build, push (Artifact Registry) e atualização gradual
+                (Rolling Updates).</li>
+            </ul>
+
+            <div class="flex flex-wrap gap-2 mb-5">
+              <span
+                class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#KubernetesEngine</span>
+              <span
+                class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#CloudComputing</span>
+              <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#GCP</span>
+              <span class="bg-gray-100 text-gray-700 text-xs font-medium px-2.5 py-1 rounded-full">#DevOps</span>
+            </div>
+
+            <a href="https://www.credly.com/badges/450a8fb3-5fa9-4954-8e0c-bec74bef8f13/public_url" target="_blank"
+              rel="noopener"
+              class="inline-flex items-center text-primary font-semibold hover:text-blue-700 transition duration-300">
+              Ver Certificado Original
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <footer class="bg-white text-center p-4 border-t border-gray-200 mt-10">
+    <p class="text-sm text-gray-500">
+      &copy; 2026 Douglas Sousa. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

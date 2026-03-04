@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mundo Animal - Detalhes do Projeto</title>
+
+  <link rel="stylesheet" href="../css/global.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="../assets/icons/icone.png" type="image/x-icon" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4A90E2",
+            "fundo-claro": "#F5F5F5",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Apenas o CSS necessário para o menu e animações */
+    .menu-toggle .bar {
+      display: block;
+      width: 24px;
+      height: 2px;
+      margin: 4px auto;
+      background-color: #374151;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    #mobileMenu {
+      opacity: 0.98;
+    }
+
+    .translate-x-0 {
+      transform: translateX(0) !important;
+    }
+
+    .no-scroll {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body class="bg-fundo-claro min-h-screen">
+  <header class="bg-white shadow-md p-4 md:px-12 flex justify-between items-center sticky top-0 z-50">
+    <div class="text-2xl font-bold text-gray-800">Douglas Sousa</div>
+
+    <nav class="hidden md:flex space-x-8" id="navMenu" aria-label="Desktop Menu">
+      <a href="../index.html"
+        class="text-gray-600 hover:text-primary hover:border-b-2 hover:border-primary pb-1 transition duration-300">Início</a>
+      <a href="../projetos.html"
+        class="text-gray-800 hover:text-primary pb-1 border-b-2 border-primary active">Projetos</a>
+      <a href="../sobre.html"
+        class="text-gray-600 hover:text-primary hover:border-b-2 hover:border-primary pb-1 transition duration-300">Sobre mim</a>
+      <a href="../contato.html"
+        class="text-gray-600 hover:text-primary hover:border-b-2 hover:border-primary pb-1 transition duration-300">Contatos</a>
+    </nav>
+
+    <button class="md:hidden flex flex-col justify-center items-center menu-toggle z-50" id="menuToggle"
+      aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <nav id="mobileMenu"
+      class="fixed top-0 left-0 w-full h-full bg-gray-800 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden z-40"
+      aria-label="Mobile Menu">
+      <ul class="flex flex-col items-center justify-center h-full text-2xl space-y-8">
+        <li>
+          <a href="../index.html" class="text-white hover:text-primary">Home</a>
+        </li>
+        <li>
+          <a href="../projetos.html" class="text-primary hover:text-white">Projetos</a>
+        </li>
+        <li>
+          <a href="../sobre.html" class="text-white hover:text-primary">Sobre</a>
+        </li>
+        <li>
+          <a href="../contato.html" class="text-white hover:text-primary">Contato</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 md:py-16">
+    <header class="mb-16 md:mb-20 text-center">
+      <div
+        class="inline-flex items-center justify-center p-6 rounded-2xl bg-white shadow-lg border-2 border-primary mb-8">
+        <img src="../assets/covid.jpeg" alt="Mockup do AppCoffeeShop"
+          class="h-36 md:h-56 w-auto drop-shadow-lg transition-transform duration-500 hover:scale-105" />
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 border-b-4 border-primary pb-2 inline-block">
+        Estatísticas COVID-19
+      </h1>
+      <p class="text-gray-600 text-lg mb-8">
+        Site para análise de dados de casos, suspeitos e falecimentos decorrentes à COVID-19.
+      </p>
+
+      <div class="flex justify-center flex-wrap gap-4 mt-10">
+        <a href="https://github.com/douglasessousa/Dev-Web/tree/main/API%20COVID" target="_blank" rel="noopener"
+          class="flex items-center bg-gray-800 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-all duration-300">
+          <img src="../assets/icons/github.svg" alt="Ícone do GitHub" class="w-5 h-5 mr-2 icons-white" />
+          Ver no GitHub (Código)
+        </a>
+      </div>
+    </header>
+
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-gray-200 pb-2">
+        Tecnologias Utilizadas
+      </h2>
+      <div class="flex flex-wrap gap-3">
+        <span class="bg-purple-100 text-purple-700 text-sm font-medium px-4 py-2 rounded-full">HTML</span>
+        <span class="bg-orange-100 text-orange-700 text-sm font-medium px-4 py-2 rounded-full">CSS</span>
+        <span class="bg-red-100 text-red-700 text-sm font-medium px-4 py-2 rounded-full">JavaScript</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center p-4 border-t border-gray-200 mt-10">
+    <p class="text-sm text-gray-500">
+      &copy; 2026 Douglas Sousa. Todos os direitos reservados.
+    </p>
+  </footer>
+
+  <script src="../js/script.js"></script>
+</body>
+
+</html>
